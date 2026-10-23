@@ -1,0 +1,1404 @@
+{
+  "install": "D:\\Ansys Inc\\v252\\Lumerical",
+  "python": "D:\\工作\\MarkSimFDTD\\.venv\\Scripts\\python.exe",
+  "target_version": "2023 R2.1",
+  "target_runtime_verified": false,
+  "target_version_match": "not asserted",
+  "runtime_verified_scope": "Only the installed runtime_version reported below; target 2023 R2.1 compatibility is not asserted",
+  "scope": "Actual geometry/material construction and readback, no FDTD solve or fit accuracy validation",
+  "cases": [
+    {
+      "entry": "D:\\工作\\MarkSimModeler\\examples\\AH53_DEMO\\outputs\\新建文件夹\\Mark_export\\lumerical_fixed_v0.2.1\\main.lsf",
+      "group": "MSM_333e709e4623_1",
+      "script_sha256": "b76ebfe22a67ac29eeff9191b66089f3a31f63faf7610270e2ecd067d4a7a1c1",
+      "geometry": {
+        "count": 5,
+        "objects": [
+          {
+            "object_name": "background_enclosure",
+            "bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                1.0000000000000002e-06
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                1e-06
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0001_AIR_DEMO",
+            "mesh_order": 3,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00001_DEMO_0",
+            "bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                0.0
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                0.0
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0003_SUBSTRATE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00002_AH53____0",
+            "bounds_m": [
+              [
+                2.4e-06,
+                4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                2.4e-06,
+                4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00003_AH53____1",
+            "bounds_m": [
+              [
+                -8e-07,
+                8e-07
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-07,
+                8e-07
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00004_AH53____2",
+            "bounds_m": [
+              [
+                -4e-06,
+                -2.4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -4e-06,
+                -2.4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          }
+        ]
+      },
+      "materials": [
+        {
+          "material": "MSM_333e709e4623_1_mat_0001_AIR_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                1.0
+              ],
+              [
+                466240214618973.56,
+                1.0
+              ],
+              [
+                749481144999999.9,
+                1.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                4.0
+              ],
+              [
+                466240214618973.56,
+                4.0
+              ],
+              [
+                749481144999999.9,
+                4.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_333e709e4623_1_mat_0003_SUBSTRATE_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                2.25
+              ],
+              [
+                466240214618973.56,
+                2.25
+              ],
+              [
+                749481144999999.9,
+                2.25
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "elapsed_seconds": 0.29599999997299165,
+      "name": "main_first"
+    },
+    {
+      "entry": "D:\\工作\\MarkSimModeler\\examples\\AH53_DEMO\\outputs\\新建文件夹\\Mark_export\\lumerical_fixed_v0.2.1\\main.lsf",
+      "group": "MSM_333e709e4623_2",
+      "script_sha256": "b76ebfe22a67ac29eeff9191b66089f3a31f63faf7610270e2ecd067d4a7a1c1",
+      "geometry": {
+        "count": 5,
+        "objects": [
+          {
+            "object_name": "background_enclosure",
+            "bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                1.0000000000000002e-06
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                1e-06
+              ]
+            ],
+            "material": "MSM_333e709e4623_2_mat_0001_AIR_DEMO",
+            "mesh_order": 3,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00001_DEMO_0",
+            "bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                0.0
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                0.0
+              ]
+            ],
+            "material": "MSM_333e709e4623_2_mat_0003_SUBSTRATE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00002_AH53____0",
+            "bounds_m": [
+              [
+                2.4e-06,
+                4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                2.4e-06,
+                4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_2_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00003_AH53____1",
+            "bounds_m": [
+              [
+                -8e-07,
+                8e-07
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-07,
+                8e-07
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_2_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00004_AH53____2",
+            "bounds_m": [
+              [
+                -4e-06,
+                -2.4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -4e-06,
+                -2.4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_2_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          }
+        ]
+      },
+      "materials": [
+        {
+          "material": "MSM_333e709e4623_2_mat_0001_AIR_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                1.0
+              ],
+              [
+                466240214618973.56,
+                1.0
+              ],
+              [
+                749481144999999.9,
+                1.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_333e709e4623_2_mat_0002_RIDGE_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                4.0
+              ],
+              [
+                466240214618973.56,
+                4.0
+              ],
+              [
+                749481144999999.9,
+                4.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_333e709e4623_2_mat_0003_SUBSTRATE_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                2.25
+              ],
+              [
+                466240214618973.56,
+                2.25
+              ],
+              [
+                749481144999999.9,
+                2.25
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "elapsed_seconds": 0.07900000002700835,
+      "name": "main_second"
+    },
+    {
+      "entry": "D:\\工作\\MarkSimModeler\\examples\\AH53_DEMO\\outputs\\新建文件夹\\Mark_export\\lumerical_fixed_v0.2.1\\import_stl.lsf",
+      "group": "MSM_333e709e4623_1",
+      "script_sha256": "c88828120cfceee807414135e7d52aeb19b730a25bb999801c68599e85cb56b4",
+      "geometry": {
+        "count": 5,
+        "objects": [
+          {
+            "object_name": "obj_00001_DEMO_0",
+            "bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                0.0
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                0.0
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0003_SUBSTRATE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00002_AH53____0",
+            "bounds_m": [
+              [
+                2.4000000953674314e-06,
+                4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3.000000119209289e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                2.4000000953674314e-06,
+                4e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3.000000119209289e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00003_AH53____1",
+            "bounds_m": [
+              [
+                -8.00000011920929e-07,
+                8.00000011920929e-07
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3.000000119209289e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8.00000011920929e-07,
+                8.00000011920929e-07
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3.000000119209289e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00004_AH53____2",
+            "bounds_m": [
+              [
+                -4e-06,
+                -2.4000000953674314e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3.000000119209289e-07
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -4e-06,
+                -2.4000000953674314e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                0.0,
+                3.000000119209289e-07
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "background_enclosure",
+            "bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                1e-06
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                -8e-06,
+                8e-06
+              ],
+              [
+                -1e-06,
+                1e-06
+              ],
+              [
+                -2e-06,
+                1e-06
+              ]
+            ],
+            "material": "MSM_333e709e4623_1_mat_0001_AIR_DEMO",
+            "mesh_order": 3,
+            "passed": true
+          }
+        ]
+      },
+      "materials": [
+        {
+          "material": "MSM_333e709e4623_1_mat_0001_AIR_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                1.0
+              ],
+              [
+                466240214618973.56,
+                1.0
+              ],
+              [
+                749481144999999.9,
+                1.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                4.0
+              ],
+              [
+                466240214618973.56,
+                4.0
+              ],
+              [
+                749481144999999.9,
+                4.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_333e709e4623_1_mat_0003_SUBSTRATE_DEMO",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                2.25
+              ],
+              [
+                466240214618973.56,
+                2.25
+              ],
+              [
+                749481144999999.9,
+                2.25
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "elapsed_seconds": 0.0940000000409782,
+      "name": "stl"
+    },
+    {
+      "entry": "D:\\工作\\MarkSimModeler\\outputs\\lumerical_runtime_20261023\\generated_verification_final\\voxel_export\\main.lsf",
+      "group": "MSM_bfb093de0ccb_1",
+      "script_sha256": "f6fec5932437169c382bdd5ac4a3c48588625f9b01f67ed4c9ca0ace302d2b38",
+      "geometry": {
+        "count": 2,
+        "objects": [
+          {
+            "object_name": "background_enclosure",
+            "bounds_m": [
+              [
+                2e-06,
+                2.2999999999999996e-06
+              ],
+              [
+                2.9999999999999997e-06,
+                3.6e-06
+              ],
+              [
+                4e-06,
+                4.9e-06
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                2e-06,
+                2.2999999999999996e-06
+              ],
+              [
+                3e-06,
+                3.6e-06
+              ],
+              [
+                4e-06,
+                4.9000000000000005e-06
+              ]
+            ],
+            "material": "MSM_bfb093de0ccb_1_mat_0002_air",
+            "mesh_order": 3,
+            "passed": true
+          },
+          {
+            "object_name": "obj_00001_absorber_1",
+            "bounds_m": [
+              [
+                2e-06,
+                2.2e-06
+              ],
+              [
+                3e-06,
+                3.3999999999999996e-06
+              ],
+              [
+                4e-06,
+                4.599999999999999e-06
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                2e-06,
+                2.2e-06
+              ],
+              [
+                3e-06,
+                3.3999999999999996e-06
+              ],
+              [
+                4e-06,
+                4.599999999999999e-06
+              ]
+            ],
+            "material": "MSM_bfb093de0ccb_1_mat_0001_absorber",
+            "mesh_order": 1,
+            "passed": true
+          }
+        ]
+      },
+      "materials": [
+        {
+          "material": "MSM_bfb093de0ccb_1_mat_0001_absorber",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                -8.84
+              ],
+              [
+                499654096666666.6,
+                -8.91
+              ],
+              [
+                749481144999999.9,
+                -8.96
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                2.4000000000000004
+              ],
+              [
+                0.0,
+                1.7999999999999998
+              ],
+              [
+                0.0,
+                1.2000000000000002
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_bfb093de0ccb_1_mat_0002_air",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                1.0
+              ],
+              [
+                499654096666666.6,
+                1.0
+              ],
+              [
+                749481144999999.9,
+                1.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "elapsed_seconds": 0.06199999991804361,
+      "name": "voxel_planar"
+    },
+    {
+      "entry": "D:\\工作\\MarkSimModeler\\outputs\\lumerical_runtime_20261023\\generated_verification_final\\voxel_export\\import_stl.lsf",
+      "group": "MSM_bfb093de0ccb_1",
+      "script_sha256": "76001924d51c2bf158851828b01579946435e86c5563d39361d7226506343f46",
+      "geometry": {
+        "count": 2,
+        "objects": [
+          {
+            "object_name": "obj_00001_absorber_1",
+            "bounds_m": [
+              [
+                2e-06,
+                2.2000000476837156e-06
+              ],
+              [
+                3e-06,
+                3.4000000953674315e-06
+              ],
+              [
+                4e-06,
+                4.599999904632568e-06
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                2e-06,
+                2.2000000476837156e-06
+              ],
+              [
+                3e-06,
+                3.4000000953674315e-06
+              ],
+              [
+                4e-06,
+                4.599999904632568e-06
+              ]
+            ],
+            "material": "MSM_bfb093de0ccb_1_mat_0001_absorber",
+            "mesh_order": 1,
+            "passed": true
+          },
+          {
+            "object_name": "background_enclosure",
+            "bounds_m": [
+              [
+                2e-06,
+                2.299999952316284e-06
+              ],
+              [
+                3e-06,
+                3.5999999046325684e-06
+              ],
+              [
+                4e-06,
+                4.900000095367432e-06
+              ]
+            ],
+            "expected_bounds_m": [
+              [
+                2e-06,
+                2.299999952316284e-06
+              ],
+              [
+                3e-06,
+                3.5999999046325684e-06
+              ],
+              [
+                4e-06,
+                4.900000095367432e-06
+              ]
+            ],
+            "material": "MSM_bfb093de0ccb_1_mat_0002_air",
+            "mesh_order": 3,
+            "passed": true
+          }
+        ]
+      },
+      "materials": [
+        {
+          "material": "MSM_bfb093de0ccb_1_mat_0001_absorber",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                -8.84
+              ],
+              [
+                499654096666666.6,
+                -8.91
+              ],
+              [
+                749481144999999.9,
+                -8.96
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                2.4000000000000004
+              ],
+              [
+                0.0,
+                1.7999999999999998
+              ],
+              [
+                0.0,
+                1.2000000000000002
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        },
+        {
+          "material": "MSM_bfb093de0ccb_1_mat_0002_air",
+          "sampled_data": {
+            "real": [
+              [
+                299792457999999.94,
+                1.0
+              ],
+              [
+                499654096666666.6,
+                1.0
+              ],
+              [
+                749481144999999.9,
+                1.0
+              ]
+            ],
+            "imag": [
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0
+              ]
+            ]
+          },
+          "fit_range_m": [
+            4.000000000000001e-07,
+            1.0000000000000002e-06
+          ],
+          "passed": true
+        }
+      ],
+      "passed": true,
+      "elapsed_seconds": 0.0470000000204891,
+      "name": "voxel_stl"
+    }
+  ],
+  "passed": true,
+  "runtime_version": "8.34.4175",
+  "rerun_names_distinct": true,
+  "first_group_after_rerun": {
+    "count": 5,
+    "objects": [
+      {
+        "object_name": "background_enclosure",
+        "bounds_m": [
+          [
+            -8e-06,
+            8e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            -2e-06,
+            1.0000000000000002e-06
+          ]
+        ],
+        "expected_bounds_m": [
+          [
+            -8e-06,
+            8e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            -2e-06,
+            1e-06
+          ]
+        ],
+        "material": "MSM_333e709e4623_1_mat_0001_AIR_DEMO",
+        "mesh_order": 3,
+        "passed": true
+      },
+      {
+        "object_name": "obj_00001_DEMO_0",
+        "bounds_m": [
+          [
+            -8e-06,
+            8e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            -2e-06,
+            0.0
+          ]
+        ],
+        "expected_bounds_m": [
+          [
+            -8e-06,
+            8e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            -2e-06,
+            0.0
+          ]
+        ],
+        "material": "MSM_333e709e4623_1_mat_0003_SUBSTRATE_DEMO",
+        "mesh_order": 1,
+        "passed": true
+      },
+      {
+        "object_name": "obj_00002_AH53____0",
+        "bounds_m": [
+          [
+            2.4e-06,
+            4e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            0.0,
+            3e-07
+          ]
+        ],
+        "expected_bounds_m": [
+          [
+            2.4e-06,
+            4e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            0.0,
+            3e-07
+          ]
+        ],
+        "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+        "mesh_order": 1,
+        "passed": true
+      },
+      {
+        "object_name": "obj_00003_AH53____1",
+        "bounds_m": [
+          [
+            -8e-07,
+            8e-07
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            0.0,
+            3e-07
+          ]
+        ],
+        "expected_bounds_m": [
+          [
+            -8e-07,
+            8e-07
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            0.0,
+            3e-07
+          ]
+        ],
+        "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+        "mesh_order": 1,
+        "passed": true
+      },
+      {
+        "object_name": "obj_00004_AH53____2",
+        "bounds_m": [
+          [
+            -4e-06,
+            -2.4e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            0.0,
+            3e-07
+          ]
+        ],
+        "expected_bounds_m": [
+          [
+            -4e-06,
+            -2.4e-06
+          ],
+          [
+            -1e-06,
+            1e-06
+          ],
+          [
+            0.0,
+            3e-07
+          ]
+        ],
+        "material": "MSM_333e709e4623_1_mat_0002_RIDGE_DEMO",
+        "mesh_order": 1,
+        "passed": true
+      }
+    ]
+  }
+}

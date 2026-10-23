@@ -41,6 +41,22 @@ def _number(value):
     return format(value, ".17g")
 
 
+def _matrix_lines(variable, rows):
+    """Emit LSF rows with separators BETWEEN rows, never before the closing ].
+
+    A trailing semicolon is an empty final row in LSF, unlike the permissive
+    syntax of some other array languages. This applies to optical data and to
+    both polygon/planar-solid vertex tables.
+    """
+    rows = list(rows)
+    if not rows:
+        raise ValueError("Cannot export an empty Lumerical matrix")
+    return [f"{variable} = [", *[
+        "  " + ", ".join(row) + (";" if i < len(rows) - 1 else "")
+        for i, row in enumerate(rows)
+    ], "];"]
+
+
 def _slug(value):
     """Names in scripts/files are ASCII identifiers; source names stay in JSON."""
     return re.sub(r"[^A-Za-z0-9_]", "_", str(value)).strip("_")[:48] or "object"
@@ -192,10 +208,12 @@ def _material_lines(materials):
         if mat["lossless_assumption"]:
             lines.append("# User explicitly selected k=0 for missing k; this is an approximation.")
         lines += ['mm_created_material = addmaterial("Sampled data");',
-                  f'setmaterial(mm_created_material,"name",{var});', "mm_sampled = ["]
-        for frequency, re_eps, im_eps in zip(mat["frequency_hz"], mat["epsilon_real"], mat["epsilon_imag"]):
-            lines.append(f"  {_number(frequency)}, ({_number(re_eps)} + 1i*{_number(im_eps)});")
-        lines += ["];", f'setmaterial({var},"sampled data",mm_sampled);',
+                  f'setmaterial(mm_created_material,"name",{var});']
+        lines += _matrix_lines("mm_sampled", (
+            [_number(frequency), f"({_number(re_eps)} + 1i*{_number(im_eps)})"]
+            for frequency, re_eps, im_eps in zip(mat["frequency_hz"], mat["epsilon_real"], mat["epsilon_imag"])
+        ))
+        lines += [f'setmaterial({var},"sampled data",mm_sampled);',
                   f'setmaterial({var},"specify fit range",1);',
                   f'setmaterial({var},"wavelength min",{_number(mat["wavelength_range_nm"][0]*1e-9)});',
                   f'setmaterial({var},"wavelength max",{_number(mat["wavelength_range_nm"][1]*1e-9)});', ""]
@@ -224,19 +242,19 @@ def _polygon_lines(solid, name, material_var):
     signed = np.sum(xy[:, 0] * np.roll(xy[:, 1], -1) - xy[:, 1] * np.roll(xy[:, 0], -1))
     if signed < 0:
         xy = xy[::-1]
-    lines = ["# XY polygon extruded along physical z.", "mm_xy = ["]
-    lines += [f"  {_number(x*1e-6)}, {_number(y*1e-6)};" for x, y in xy]
-    lines += ["];", "addpoly;", 'set("x",0); set("y",0);', 'set("vertices",mm_xy);',
+    lines = ["# XY polygon extruded along physical z."]
+    lines += _matrix_lines("mm_xy", ([_number(x*1e-6), _number(y*1e-6)] for x, y in xy))
+    lines += ["addpoly;", 'set("x",0); set("y",0);', 'set("vertices",mm_xy);',
               f'set("z",{_number((solid["z_min_um"] + solid["z_max_um"])*0.5e-6)});',
               f'set("z span",{_number((solid["z_max_um"] - solid["z_min_um"])*1e-6)});']
     return lines + _object_tail(name, material_var, 1)
 
 
 def _planar_lines(mesh, name, material_var):
-    lines = ["# Closed three-dimensional material surface; facet indices are one-based.", "mm_vertices = ["]
-    lines += ["  " + ", ".join(_number(v*1e-6) for v in point) + ";" for point in mesh["vertices_um"]]
+    lines = ["# Closed three-dimensional material surface; facet indices are one-based."]
+    lines += _matrix_lines("mm_vertices", ([_number(v*1e-6) for v in point] for point in mesh["vertices_um"]))
     triangles = np.asarray(mesh["triangles"])
-    lines += ["];", f"mm_facets = cell({len(triangles)});"]
+    lines += [f"mm_facets = cell({len(triangles)});"]
     for i, tri in enumerate(triangles, 1):
         lines += [f"mm_facets{{{i}}} = cell(1);",
                   f'mm_facets{{{i}}}{{1}} = [{",".join(str(int(v)+1) for v in tri)}];']
@@ -352,11 +370,10 @@ def export_lumerical(model, output_dir, *, export_stl=True, material_mapping=Non
             stl_records.append(record)
     main = _preamble(prefix, materials) + material_lines + body + _finish()
     (destination / "main.lsf").write_text("\n".join(main) + "\n", encoding="utf-8")
-    (destination / "materials.lsf").write_text(
+    (destination / "materials_excerpt.txt").write_text(
         "# Inspection excerpt. main.lsf embeds this section; do not execute this excerpt by itself.\n"
         "# mm_group is allocated by main.lsf after checking for collisions.\n"
-        '?"Read-only excerpt: run main.lsf to allocate new material and object names.";\n'
-        "break;\n" + "\n".join(material_lines) + "\n", encoding="utf-8")
+        + "\n".join(material_lines) + "\n", encoding="utf-8")
     if export_stl:
         lines = _preamble(prefix, materials, stl_records) + material_lines + _group_lines()
         for record in stl_records:
@@ -397,7 +414,9 @@ def export_lumerical(model, output_dir, *, export_stl=True, material_mapping=Non
     manifest = destination / "lumerical_manifest.json"
     manifest.write_text(_json(report), encoding="utf-8")
     return {"directory": str(destination), "main_lsf": str(destination / "main.lsf"),
-            "materials_lsf": str(destination / "materials.lsf"), "manifest": str(manifest),
+            "materials_excerpt": str(destination / "materials_excerpt.txt"),
+            "materials_lsf": None,  # Compatibility key; the excerpt is no longer an executable entry point.
+            "manifest": str(manifest),
             "stl_import_lsf": str(destination / "import_stl.lsf") if export_stl else None,
             "report": report}
 
@@ -416,7 +435,8 @@ def _export_readme(geometry, objects, warnings, export_stl):
         "背景盒 order=3，前景对象 order=1；背景盒覆盖体积不应与前景体积相加。",
         "物理轴 x/y/z 不变。LSF 用米；STL 数值用微米，导入比例必须为 1e-6。",
         "多边形采用 XY 轮廓沿 z 拉伸；体素采用材料表面三角面片，不自动平滑或压成二维。",
-        "materials.lsf 是 main.lsf 中材料段的阅读摘录，不是独立运行入口。",
+        "只运行 main.lsf 即可同时创建材料和结构，不需要先运行其他材料脚本。",
+        "materials_excerpt.txt 是材料段的阅读摘录，不是运行入口。",
         "materials_snapshot.json 保存完整原始光学表；CSV 和 manifest 记录实际导出的采样点。",
     ]
     if export_stl:

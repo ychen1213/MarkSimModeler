@@ -37,6 +37,8 @@ def model():
 
 def _matrix(script, variable):
     rows = re.search(re.escape(variable)+r" = \[\n(.*?)\n\];", script, re.S).group(1)
+    # Do not normalize away the LSF error that originally reached the user.
+    assert not rows.rstrip().endswith(";"), "LSF matrix must not end with an empty row"
     return np.array([[float(s) for s in row.strip().rstrip(";").split(",")]
                      for row in rows.splitlines()])
 

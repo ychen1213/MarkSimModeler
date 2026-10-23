@@ -67,3 +67,11 @@
 最终完整执行 `python -X utf8 -m pytest tests -q --junitxml=outputs/ux_audit/all_tests_final.xml`：**131 passed in 238.32s**，退出码0。涵盖真实Tk、真实GDS/多材料几何、合成图边缘提取/体素、结构包及LSF/STL文件输出。新增回归覆盖待应用表单、材料单位、模态窗口、保存失败保护、忙态选择拦截、销毁控件、小窗口底栏、配置独立保存往返与防覆盖。
 
 实际记录：[最终完整JUnit](validation_artifacts/ux_all_tests_v0.2.0.xml)。本轮没有运行Meep或Lumerical求解，没有改变目标版本未验证的结论。
+
+## v0.2.1 Lumerical脚本缺陷修复（2026-10-23）
+
+用户实际运行发现 `main.lsf` 第29行语法错误。已确认旧测试只验证数据，并用 `.rstrip(';')` 掩盖了LSF矩阵最后一行多余分号。修复材料、多边形和三维顶点矩阵输出，材料阅读摘录改为 `.txt`。
+
+新增回归对修复前代码实际失败，对修复版通过；最终全套 **139 passed in 97.11s**。[JUnit](validation_artifacts/all_tests_v0.2.1.xml)
+
+本次另在真实 **Lumerical 2025 R2 / 8.34.4175** 独立隐藏会话中完成主脚本两次、STL、三维体素面片及体素STL，共 **5/5** 执行与对象/材料回读通过。无FDTD求解、无目标2023 R2.1执行，未改用户原工程和原导出。[实际回读](validation_artifacts/lumerical_runtime_v0.2.1.json)、[根因与复用验证工具](LUMERICAL_FIX_v0.2.1.md)
