@@ -1,0 +1,198 @@
+{
+  "schema_version": "1.0",
+  "patch_id": "structure-bundle-import-20261022",
+  "files": [
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/service.py",
+      "payload": "files/MarkSim/src/marksim/service.py",
+      "before_sha256": "121ae5b2dd89cd0748cee2044f543970fa24eabd8c4de7d7f49b4dc20f4596de",
+      "after_sha256": "59faa5ea87530c9099cbd45e5a5357f0672a15b529ea2ddcb72bd68697ab1c46",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/cli.py",
+      "payload": "files/MarkSim/src/marksim/cli.py",
+      "before_sha256": "6db3c11a5e29f6aae0c5e06380028ff8b1b755bc048626e0132dc08eca003be2",
+      "after_sha256": "487b6e7839b4415beeae938f796c103c0d19378755b697298b9b6a1226097945",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/debugging.py",
+      "payload": "files/MarkSim/src/marksim/debugging.py",
+      "before_sha256": "dec1c48a0ba238ace46aff331a9fb2eb4e59fac45b501c805df3ce7d1cbbeb6c",
+      "after_sha256": "0822791064ae797eec8da49cd816ef0f74f21392b2c0c228953ad7bb9ea13414",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/ui/controller.py",
+      "payload": "files/MarkSim/src/marksim/ui/controller.py",
+      "before_sha256": "9e10096e62e5a74c29409fa4da41bf952199486e7a52a5ab925581e5aa114cb8",
+      "after_sha256": "1fffcbf71f69a9149f445e0ce9c38ea8b75b13a9acb1fb5ef83cc5c95e600193",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/ui/sections/project.py",
+      "payload": "files/MarkSim/src/marksim/ui/sections/project.py",
+      "before_sha256": "dc0a813909e368d5f28f26578d9534f59cdf169f4a09c9b2f4e812fa27bff670",
+      "after_sha256": "812bc163efc054ce895ef9a39bf3c92ee97ca0d79112b50b2216828397c9c14e",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/ui/sections/process.py",
+      "payload": "files/MarkSim/src/marksim/ui/sections/process.py",
+      "before_sha256": "098ebd95f7127d2cb4539958d3a99e95b0081a83c5cd9b1a1710241ca15be26c",
+      "after_sha256": "5a0e8b332bd43a7e5989f19e4bd92288b2544c6332b0d8878c7dad2a086d8722",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/ui/sections/materials.py",
+      "payload": "files/MarkSim/src/marksim/ui/sections/materials.py",
+      "before_sha256": "91c6cc9879b92becaef4f67350debaa08378f75c0257bddcbada5822820b030b",
+      "after_sha256": "7e124c7885576fce2b1fad4bd6547c5d515392449263a79d0a483308bfb9433b",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/ui/sections/geometry.py",
+      "payload": "files/MarkSim/src/marksim/ui/sections/geometry.py",
+      "before_sha256": "612dcbad2fe1935593acbd33971c2eeda9d9e1b6feda6986ffbec5bb422f7e7d",
+      "after_sha256": "6ed6320097fe5b5e11fee32b9918e0508b21feca27b9270c5b62149c0dfd219c",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/ui/mark_editor.py",
+      "payload": "files/MarkSim/src/marksim/ui/mark_editor.py",
+      "before_sha256": "c5e876a4214d0f8d4aaa1c877086d8100a5f6895220b1848e162c9a8e05bbd3d",
+      "after_sha256": "d8bf59defe3fff3f05f1822de7d20c007b1dddc3b04ab232b3a9985fcd28dc01",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/service.py",
+      "payload": "files/MarkSimFDTD/src/marksim/service.py",
+      "before_sha256": "95c476456f8fd71292d7cd2c0c58d4e821e67bb4a756b78571f0980094df7fe7",
+      "after_sha256": "edd50b10661610f678d1cb2a981eedd0c9625e8c1182139f826df08181d2d90f",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/cli.py",
+      "payload": "files/MarkSimFDTD/src/marksim/cli.py",
+      "before_sha256": "17bd3806331deb6d3140a38bd4655d86978bb4e7eefdab83c977e5e58fea240b",
+      "after_sha256": "b52aad7ffc60f5a3862b77d1e6413a0249b1a98c10c513be1112882917bc50b6",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/debugging.py",
+      "payload": "files/MarkSimFDTD/src/marksim/debugging.py",
+      "before_sha256": "36f08f0a6af1182b6261e2ffdfcbf7c7911c154d2391656ac3cf7956a5a2c31b",
+      "after_sha256": "34a16463c5f5f467fff4318087aba288bed0466a054e3e6de55dd96cb176798c",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/ui/controller.py",
+      "payload": "files/MarkSimFDTD/src/marksim/ui/controller.py",
+      "before_sha256": "7bca52405de15a1230af31d1bc5581b46781e0b712c225bde029add495983953",
+      "after_sha256": "8c4da62976a5d7f0b756b7e51a2effddb595bf19d6c2bc5860a6faf8e40be1e5",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/ui/sections/project.py",
+      "payload": "files/MarkSimFDTD/src/marksim/ui/sections/project.py",
+      "before_sha256": "06d58701f24564a6588674b27645776b3f150e67d60dfcd13e5d629afc32dfc8",
+      "after_sha256": "6b6f0396d7cc5448d5197480c21fdbe4575fee25911bd0e1e9299f31571d95a0",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/ui/sections/process.py",
+      "payload": "files/MarkSimFDTD/src/marksim/ui/sections/process.py",
+      "before_sha256": "098ebd95f7127d2cb4539958d3a99e95b0081a83c5cd9b1a1710241ca15be26c",
+      "after_sha256": "5a0e8b332bd43a7e5989f19e4bd92288b2544c6332b0d8878c7dad2a086d8722",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/ui/sections/materials.py",
+      "payload": "files/MarkSimFDTD/src/marksim/ui/sections/materials.py",
+      "before_sha256": "91c6cc9879b92becaef4f67350debaa08378f75c0257bddcbada5822820b030b",
+      "after_sha256": "7e124c7885576fce2b1fad4bd6547c5d515392449263a79d0a483308bfb9433b",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/ui/sections/geometry.py",
+      "payload": "files/MarkSimFDTD/src/marksim/ui/sections/geometry.py",
+      "before_sha256": "612dcbad2fe1935593acbd33971c2eeda9d9e1b6feda6986ffbec5bb422f7e7d",
+      "after_sha256": "6ed6320097fe5b5e11fee32b9918e0508b21feca27b9270c5b62149c0dfd219c",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/ui/mark_editor.py",
+      "payload": "files/MarkSimFDTD/src/marksim/ui/mark_editor.py",
+      "before_sha256": "ae8672c3a65a93e4f0e49c780c45d8937528099363166a8995c68ba75479d72d",
+      "after_sha256": "357ef7a02f89011e57a862b0e825296741e876fcd3365ec39e2b43628a29e4fa",
+      "action": "modify"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "src/marksim/structure_import.py",
+      "payload": "files/MarkSim/src/marksim/structure_import.py",
+      "before_sha256": null,
+      "after_sha256": "5547ba7f51fa1654bb4d66c4a4e9be60b7a401c626b5194c48136aff07ad85ca",
+      "action": "add"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "tests/test_structure_import.py",
+      "payload": "files/MarkSim/tests/test_structure_import.py",
+      "before_sha256": null,
+      "after_sha256": "a98fbb466e45a78b93b890c9077522cf261c42e8d5f1f022d6ef819a6d172d4b",
+      "action": "add"
+    },
+    {
+      "edition": "MarkSim",
+      "relative_path": "docs/structure_import.md",
+      "payload": "files/MarkSim/docs/structure_import.md",
+      "before_sha256": null,
+      "after_sha256": "08cb12d981e3b0a2e8ab30738a040f16b4977ed3803341ba439d9adc618253fa",
+      "action": "add"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "src/marksim/structure_import.py",
+      "payload": "files/MarkSimFDTD/src/marksim/structure_import.py",
+      "before_sha256": null,
+      "after_sha256": "5547ba7f51fa1654bb4d66c4a4e9be60b7a401c626b5194c48136aff07ad85ca",
+      "action": "add"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "tests/test_structure_import.py",
+      "payload": "files/MarkSimFDTD/tests/test_structure_import.py",
+      "before_sha256": null,
+      "after_sha256": "a98fbb466e45a78b93b890c9077522cf261c42e8d5f1f022d6ef819a6d172d4b",
+      "action": "add"
+    },
+    {
+      "edition": "MarkSimFDTD",
+      "relative_path": "docs/structure_import.md",
+      "payload": "files/MarkSimFDTD/docs/structure_import.md",
+      "before_sha256": null,
+      "after_sha256": "08cb12d981e3b0a2e8ab30738a040f16b4977ed3803341ba439d9adc618253fa",
+      "action": "add"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "sem_image": "../sem_top_synthetic.png",
+  "tem_image": "../tem_cross_synthetic.png",
+  "sem_nm_per_pixel": 3.0,
+  "tem_nm_per_pixel": 3.0,
+  "calibration_note": "ASSUMED 3 nm/px for these uncalibrated example images; replace using real microscope calibration.",
+  "wavelength_nm": 633.0,
+  "background_material": "air",
+  "material_library": "../materials/library.json",
+  "output_dir": "../outputs/existing_images",
+  "geometry": {"tem_match": "ordered", "bowing_nm": 0.0},
+  "grid": {"spacing_nm": [15.0, 15.0, 10.0], "substrate_depth_nm": 200.0, "air_padding_nm": 250.0, "max_voxels": 12000000},
+  "regions": [
+    {"name": "silicon_substrate", "kind": "substrate", "material": "silicon", "priority": 10},
+    {"name": "silica_grating", "kind": "ridge", "material": "silica", "priority": 20}
+  ]
+}

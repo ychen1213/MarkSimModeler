@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.0",
+  "period_x_um": 16.0,
+  "cell_bounds_um": [
+    [
+      -8.0,
+      8.0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      -2,
+      1.0
+    ]
+  ],
+  "invariant_y": true,
+  "background_material": "AIR_DEMO",
+  "substrate_material": "SUBSTRATE_DEMO",
+  "substrate_extend_bottom": true,
+  "mark": {
+    "schema_version": "1.0",
+    "mark_type": "AH53",
+    "mother_period_um": 16.0,
+    "cd_um": 1.6,
+    "height_um": 0.3,
+    "subpitch_um": 3.2,
+    "stripe_count": 3,
+    "target_order": 5,
+    "centers_um": [
+      -3.2,
+      0.0,
+      3.2
+    ],
+    "occupied_width_um": 8.0,
+    "fill_fraction": 0.30000000000000004,
+    "template_version": "ah-public-stripes-1.0",
+    "target_step_id": "ridge",
+    "template_mask": {
+      "sha256": "47d99086806e128cc774a03b6274f8ee943a63a537e2bdcc80ba08bf61842eb9",
+      "cell": "AH53_MARK",
+      "layer": 1,
+      "datatype": 0,
+      "y_bounds_um": [
+        -1.0,
+        1.0
+      ]
+    }
+  },
+  "steps": [
+    {
+      "id": "substrate",
+      "name": "衬底 DEMO",
+      "operation": "create_substrate",
+      "material": "SUBSTRATE_DEMO",
+      "z_min_um": -2.0,
+      "z_max_um": 0.0,
+      "enabled": true,
+      "sidewall_angle_deg": 90
+    },
+    {
+      "id": "ridge",
+      "name": "AH53 光栅",
+      "operation": "add",
+      "material": "RIDGE_DEMO",
+      "mask": {
+        "gds_path": "inputs/AH53.gds",
+        "cell": "AH53_MARK",
+        "layer": 1,
+        "datatype": 0
+      },
+      "mask_polarity": "positive",
+      "z_min_um": 0.0,
+      "thickness_um": 0.3,
+      "cd_bias_um": 0.0,
+      "delta_x_um": 0.0,
+      "delta_y_um": 0.0,
+      "rotation_deg": 0.0,
+      "enabled": true,
+      "sidewall_angle_deg": 90
+    },
+    {
+      "id": "coat",
+      "name": "包覆薄膜 DEMO",
+      "operation": "create_film",
+      "material": "FILM_DEMO",
+      "film_mode": "conformal",
+      "thickness_um": 0.1,
+      "sidewall_thickness_um": 0.05,
+      "enabled": true,
+      "sidewall_angle_deg": 90
+    }
+  ]
+}

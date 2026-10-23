@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+outputs/
+dist/
+logs/
+config/local_runtime.json
+my_projects/
+exports/
+examples/**/builds/
+examples/**/revisions/

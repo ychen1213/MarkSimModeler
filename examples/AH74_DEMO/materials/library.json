@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0",
+  "generation_method": "explicit_synthetic_demo",
+  "materials": {
+    "AIR_DEMO": {
+      "wavelength_nm": [
+        400.0,
+        643.0,
+        1000.0
+      ],
+      "n": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "k": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "k_status": "provided",
+      "assume_lossless": false,
+      "source": "synthetic constant-index example, not measured data",
+      "valid_range_nm": [
+        400.0,
+        1000.0
+      ]
+    },
+    "SUBSTRATE_DEMO": {
+      "wavelength_nm": [
+        400.0,
+        643.0,
+        1000.0
+      ],
+      "n": [
+        1.5,
+        1.5,
+        1.5
+      ],
+      "k": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "k_status": "provided",
+      "assume_lossless": false,
+      "source": "synthetic constant-index example, not measured data",
+      "valid_range_nm": [
+        400.0,
+        1000.0
+      ]
+    },
+    "RIDGE_DEMO": {
+      "wavelength_nm": [
+        400.0,
+        643.0,
+        1000.0
+      ],
+      "n": [
+        2.0,
+        2.0,
+        2.0
+      ],
+      "k": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "k_status": "provided",
+      "assume_lossless": false,
+      "source": "synthetic constant-index example, not measured data",
+      "valid_range_nm": [
+        400.0,
+        1000.0
+      ]
+    }
+  }
+}

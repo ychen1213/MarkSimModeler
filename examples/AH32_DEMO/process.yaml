@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "period_x_um": 16.0,
+  "cell_bounds_um": [
+    [
+      -8.0,
+      8.0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      -2,
+      1.0
+    ]
+  ],
+  "invariant_y": true,
+  "background_material": "AIR_DEMO",
+  "substrate_material": "SUBSTRATE_DEMO",
+  "substrate_extend_bottom": true,
+  "mark": {
+    "schema_version": "1.0",
+    "mark_type": "AH32",
+    "mother_period_um": 16.0,
+    "cd_um": 2.6666666666666665,
+    "height_um": 0.3,
+    "subpitch_um": 5.333333333333333,
+    "stripe_count": 2,
+    "target_order": 3,
+    "centers_um": [
+      -2.6666666666666665,
+      2.6666666666666665
+    ],
+    "occupied_width_um": 8.0,
+    "fill_fraction": 0.3333333333333333,
+    "template_version": "ah-public-stripes-1.0",
+    "target_step_id": "ridge",
+    "template_mask": {
+      "sha256": "76379a36c857147a2a69821b62a7a5fcab006db8795ad092b1770c8004c6c2bc",
+      "cell": "AH32_MARK",
+      "layer": 1,
+      "datatype": 0,
+      "y_bounds_um": [
+        -1.0,
+        1.0
+      ]
+    }
+  },
+  "steps": [
+    {
+      "id": "substrate",
+      "name": "衬底 DEMO",
+      "operation": "create_substrate",
+      "material": "SUBSTRATE_DEMO",
+      "z_min_um": -2.0,
+      "z_max_um": 0.0,
+      "enabled": true,
+      "sidewall_angle_deg": 90
+    },
+    {
+      "id": "ridge",
+      "name": "AH32 光栅",
+      "operation": "add",
+      "material": "RIDGE_DEMO",
+      "mask": {
+        "gds_path": "inputs/AH32.gds",
+        "cell": "AH32_MARK",
+        "layer": 1,
+        "datatype": 0
+      },
+      "mask_polarity": "positive",
+      "z_min_um": 0.0,
+      "thickness_um": 0.3,
+      "cd_bias_um": 0.0,
+      "delta_x_um": 0.0,
+      "delta_y_um": 0.0,
+      "rotation_deg": 0.0,
+      "enabled": true,
+      "sidewall_angle_deg": 90
+    }
+  ]
+}

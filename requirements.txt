@@ -1,0 +1,8 @@
+# Geometry and desktop dependencies only. No Meep / fdtd / WSL / lumapi.
+numpy>=1.26,<3
+scipy>=1.11,<2
+h5py>=3.10,<4
+matplotlib>=3.8,<4
+Pillow>=10,<13
+gdstk>=0.9.50,<2
+plotly>=5.18,<8

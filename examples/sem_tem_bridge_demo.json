@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0",
+  "legacy_config": {
+    "generate_demo": true,
+    "sem_nm_per_pixel": 3.0,
+    "tem_nm_per_pixel": 3.0,
+    "geometry": {"tem_match": "ordered"},
+    "grid": {"substrate_depth_nm": 200, "air_padding_nm": 250, "max_voxels": 2000000}
+  },
+  "material_map": {"0": "AIR_DEMO", "1": "SUBSTRATE_DEMO", "2": "RIDGE_DEMO"},
+  "tem_section": {
+    "origin_phys_um": [0.0, 0.66, 0.0],
+    "direction_xy": [1.0, 0.0],
+    "height_reference_um": 0.0,
+    "correspondence": "ordered",
+    "placement_status": "synthetic_assumption",
+    "note": "Known synthetic SEM/TEM pair; one section template extended along stripes."
+  },
+  "registration": {
+    "kind": "rigid",
+    "matrix_3x3": [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
+    "source_landmarks_um": [],
+    "target_landmarks_um": [],
+    "description": "Identity coordinate assignment for synthetic images; not an experimentally fitted registration."
+  },
+  "spacing_um": [0.02, 0.02, 0.02]
+}

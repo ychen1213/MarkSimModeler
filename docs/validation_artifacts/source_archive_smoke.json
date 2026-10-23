@@ -1,0 +1,68 @@
+{
+  "archive": "D:\\工作\\MarkSimModeler\\dist\\MarkSimModeler_source_20261022T151850.zip",
+  "sha256": "35995eaee21b82139b9717d4994817645a17c6f641452cb4a41f8245ace21a9e",
+  "extracted_source": "D:\\工作\\MarkSimModeler\\outputs\\source_archive_smoke\\MarkSimModeler",
+  "verified_files": 119,
+  "passed": true,
+  "results": [
+    {
+      "command": [
+        "scripts/check_environment.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"python\": \"3.12.13\",\n  \"executable\": \"D:\\\\工作\\\\MarkSimFDTD\\\\.venv\\\\Scripts\\\\python.exe\",\n  \"dependencies\": {\n    \"numpy\": \"2.5.4\",\n    \"scipy\": \"1.18.1\",\n    \"h5py\": \"3.16.0\",\n    \"matplotlib\": \"3.11.2\",\n    \"PIL\": \"12.3.0\",\n    \"gdstk\": \"1.0.2\",\n    \"plotly\": \"7.1.0\",\n    \"tkinter\": \"import OK\",\n    \"markmodel.ui\": \"import OK\"\n  },\n  \"solver_required\": false,\n  \"scope\": \"dependency imports only\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "run_modeler.py",
+        "new",
+        "--type",
+        "AH53",
+        "--output",
+        "smoke_project"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"project\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_project\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "run_modeler.py",
+        "bundle",
+        "--project",
+        "smoke_project",
+        "--output",
+        "smoke_structure"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"manifest\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_structure\\\\structure.json\",\n  \"directory\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_structure\",\n  \"files\": [\n    \"geometry.json\",\n    \"materials.json\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "run_modeler.py",
+        "lumerical",
+        "--source",
+        "smoke_structure",
+        "--output",
+        "smoke_lumerical"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"directory\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_lumerical\",\n  \"main_lsf\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_lumerical\\\\main.lsf\",\n  \"materials_lsf\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_lumerical\\\\materials.lsf\",\n  \"manifest\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_lumerical\\\\lumerical_manifest.json\",\n  \"stl_import_lsf\": \"D:\\\\工作\\\\MarkSimModeler\\\\outputs\\\\source_archive_smoke\\\\MarkSimModeler\\\\smoke_lumerical\\\\import_stl.lsf\",\n  \"target_runtime_verified\": false\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "-m",
+        "pytest",
+        "tests",
+        "-q",
+        "--junitxml=smoke_tests.xml"
+      ],
+      "exit_code": 0,
+      "stdout": ".............................................................            [100%]\n61 passed in 73.58s (0:01:13)\n",
+      "stderr": ""
+    }
+  ]
+}

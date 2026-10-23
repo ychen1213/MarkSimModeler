@@ -1,0 +1,8 @@
+{
+  "schema_version": "1.0",
+  "kind": "marksim-modeler",
+  "name": "AH74_MODELER_DEMO",
+  "process": "process.yaml",
+  "materials": "materials/library.json",
+  "description": "Synthetic modeling example; no solver configuration or optical predictions"
+}

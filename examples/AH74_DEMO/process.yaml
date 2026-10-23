@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "period_x_um": 16.0,
+  "cell_bounds_um": [
+    [
+      -8.0,
+      8.0
+    ],
+    [
+      -1,
+      1
+    ],
+    [
+      -2,
+      1.0
+    ]
+  ],
+  "invariant_y": true,
+  "background_material": "AIR_DEMO",
+  "substrate_material": "SUBSTRATE_DEMO",
+  "substrate_extend_bottom": true,
+  "mark": {
+    "schema_version": "1.0",
+    "mark_type": "AH74",
+    "mother_period_um": 16.0,
+    "cd_um": 1.1428571428571428,
+    "height_um": 0.3,
+    "subpitch_um": 2.2857142857142856,
+    "stripe_count": 4,
+    "target_order": 7,
+    "centers_um": [
+      -3.4285714285714284,
+      -1.1428571428571428,
+      1.1428571428571428,
+      3.4285714285714284
+    ],
+    "occupied_width_um": 8.0,
+    "fill_fraction": 0.2857142857142857,
+    "template_version": "ah-public-stripes-1.0",
+    "target_step_id": "ridge",
+    "template_mask": {
+      "sha256": "80b1539fc903aba22b5ef01d30c7e137156a70ee750d3f739ad58418b8c586b6",
+      "cell": "AH74_MARK",
+      "layer": 1,
+      "datatype": 0,
+      "y_bounds_um": [
+        -1.0,
+        1.0
+      ]
+    }
+  },
+  "steps": [
+    {
+      "id": "substrate",
+      "name": "衬底 DEMO",
+      "operation": "create_substrate",
+      "material": "SUBSTRATE_DEMO",
+      "z_min_um": -2.0,
+      "z_max_um": 0.0,
+      "enabled": true,
+      "sidewall_angle_deg": 90
+    },
+    {
+      "id": "ridge",
+      "name": "AH74 光栅",
+      "operation": "add",
+      "material": "RIDGE_DEMO",
+      "mask": {
+        "gds_path": "inputs/AH74.gds",
+        "cell": "AH74_MARK",
+        "layer": 1,
+        "datatype": 0
+      },
+      "mask_polarity": "positive",
+      "z_min_um": 0.0,
+      "thickness_um": 0.3,
+      "cd_bias_um": 0.0,
+      "delta_x_um": 0.0,
+      "delta_y_um": 0.0,
+      "rotation_deg": 0.0,
+      "enabled": true,
+      "sidewall_angle_deg": 90
+    }
+  ]
+}
